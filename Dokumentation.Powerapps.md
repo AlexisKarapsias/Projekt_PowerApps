@@ -16,12 +16,12 @@
   - [Power Apps](#power-apps)
     - [Navigation](#navigation)
     - [Navigation basierend auf Auswahl](#navigation-basierend-auf-auswahl)
-    - [Beispiel](#beispiel)
+    - [Beispiel → If- und Switch-Funktion](#beispiel--if--und-switch-funktion)
     - [OnVisible](#onvisible)
     - [OnCheck (JA/NEIN-Feld)](#oncheck-janein-feld)
     - [Default-Wert](#default-wert)
   - [Datenbank-Anbindung](#datenbank-anbindung)
-    - [Beispiel](#beispiel-1)
+    - [Beispiel](#beispiel)
   - [Verbesserung und Optimierung](#verbesserung-und-optimierung)
     - [Anpassungen an bestehenden Listen](#anpassungen-an-bestehenden-listen)
     - [Seite S00](#seite-s00)
@@ -104,7 +104,7 @@ Beim Betätigen des Buttons gelangt der Benutzer zur gewünschten Seite.
 
 Danach wurde eine Navigation implementiert, die abhängig von einer Benutzerentscheidung unterschiedliche Seiten öffnet. Die Logik wurde mithilfe einer ``If-`` und ``Switch``-Funktion umgesetzt.
 
-### Beispiel
+### Beispiel → If- und Switch-Funktion
 
 ```text
 If(
@@ -164,6 +164,7 @@ Set(
         }
     )
 );;
+
 ```
 
 Zusätzlich wurden einfache Berechnungen integriert, zum Beispiel:
