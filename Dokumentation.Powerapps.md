@@ -124,3 +124,7 @@ Zusätzlich habe ich einfache Berechnungen eingebaut, beispielsweise:
 
 Coalesce(Value(DataCardValue4.Text); 0) + Coalesce(Value(DataCardValue47.Text); 0)
 ```
+
+Ich habe auf dem Bühler-Button eine Home-Funktion eingebaut, falls man von vorne beginnen möchte.
+
+Auf dem Info-Button ist derzeit nur ein Beispieltext hinterlegt; dieser wird noch geändert.
