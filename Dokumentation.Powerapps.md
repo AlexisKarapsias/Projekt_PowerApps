@@ -241,4 +241,4 @@ Die Ausdrucksseiten wurden von Tobias sehr klar und strukturiert gestaltet. Zus�
 
 - Einen Druck-Button, über den der Druckvorgang ausgelöst werden kann
 
-Der Druckprozess ist mit einem Power-Automate-Flow verbunden, den Tobias ebenfalls umgesetzt hat. Nach dem Auslösen des Drucks werden die erzeugten Seiten automatisch an Olav versendet. Der Versand erfolgt per E-Mail mit einer vorgefertigten E-Mail-Vorlage, wodurch der Prozess vollständig automatisiert ist und keine manuelle Nachbearbeitung benötigt.
+Der Druckprozess ist mit einem Power-Automate-Flow verbunden, den Tobias ebenfalls umgesetzt hat. Nach dem Auslösen des Drucks werden die erzeugten Seiten automatisch an Olav versendet. Der Versand erfolgt per E-Mail mit einer vorgefertigten E-Mail-Vorlage, wodurch der Prozess vollständig automatisiert ist und keine manuelle Nachbearbeitung benötigt
