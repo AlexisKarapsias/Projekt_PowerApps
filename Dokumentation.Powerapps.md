@@ -1,10 +1,42 @@
 # Power-Apps-Projektdokumentation
+
+## Inhaltsverzeichnis
+
+- [Power-Apps-Projektdokumentation](#power-apps-projektdokumentation)
+  - [Inhaltsverzeichnis](#inhaltsverzeichnis)
+  - [Ziel und Rahmen](#ziel-und-rahmen)
+    - [Ziel](#ziel)
+    - [Vorgaben](#vorgaben)
+    - [Architektur](#architektur)
+  - [Listen](#listen)
+    - [Datentyp-Entscheidungen](#datentyp-entscheidungen)
+  - [Namenskonvention](#namenskonvention)
+    - [Beispiele](#beispiele)
+  - [Figma](#figma)
+  - [Power Apps](#power-apps)
+    - [Navigation](#navigation)
+    - [Navigation basierend auf Auswahl](#navigation-basierend-auf-auswahl)
+    - [Beispiel](#beispiel)
+    - [OnVisible](#onvisible)
+    - [OnCheck (JA/NEIN-Feld)](#oncheck-janein-feld)
+    - [Default-Wert](#default-wert)
+  - [Datenbank-Anbindung](#datenbank-anbindung)
+    - [Beispiel](#beispiel-1)
+  - [Verbesserung und Optimierung](#verbesserung-und-optimierung)
+    - [Anpassungen an bestehenden Listen](#anpassungen-an-bestehenden-listen)
+    - [Seite S00](#seite-s00)
+    - [Seite 3.1](#seite-31)
+    - [Seiten 2.2.1 und 2.2.2](#seiten-221-und-222)
+    - [SharePoint-Seite](#sharepoint-seite)
+  - [Arbeit von Tobias Kuhn](#arbeit-von-tobias-kuhn)
+
 ## Ziel und Rahmen
 
-### Ziel:
+### Ziel
+
 Umsetzung einer Power Apps Canvas App mit einer einfachen und übersichtlichen Benutzeroberfläche auf Basis bestehender Excel-Daten.
 
-### Vorgaben:
+### Vorgaben
 
 - Nutzung von Power Apps
 
@@ -12,14 +44,15 @@ Umsetzung einer Power Apps Canvas App mit einer einfachen und übersichtlichen B
 
 - Einfache Benutzeroberfläche
 
-### Architektur:
+### Architektur
+
 Als Datenbankstruktur wurden SharePoint-Listen verwendet.
 
 ## Listen
 
 Alexis entschied sich, als Datenbankstruktur einfache SharePoint-Listen zu verwenden und diese logisch aufzuteilen. Zur besseren Orientierung wurde die Struktur zunächst in Lucidchart modelliert, wie im entsprechenden Diagramm dargestellt.
 
-### Datentyp-Entscheidungen:
+### Datentyp-Entscheidungen
 
 - Person-Felder vs. Textfelder (z. B. Unummer = User().Email als Text)
 
@@ -30,7 +63,7 @@ Alexis entschied sich, als Datenbankstruktur einfache SharePoint-Listen zu verwe
 
 Zur besseren Übersicht wurde eine Namenskonvention eingeführt, die kennzeichnet, welche Frage auf welchem Bildschirm angezeigt wird und auf welcher Seite sie sich befindet.
 
-### Beispiele:
+### Beispiele
 
 00/1
 
@@ -57,9 +90,9 @@ Einige UI-Elemente wurden erst während der Implementierung in Power Apps ergän
 
 Nachdem die ersten Seiten in Power Apps erstellt waren, begann Alexis mit der Gestaltung der Startseite. Nach Rücksprache mit dem Auftraggeber wurden zunächst alle Seiten designt und in der geplanten Reihenfolge angeordnet.
 
-Anschließend wurde ein Button erstellt, der zur nächsten Seite navigiert.
+Anschliessend wurde ein Button erstellt, der zur nächsten Seite navigiert.
 
-### Navigation:
+### Navigation
 
 ```text
 Navigate('1'; ScreenTransition.None)
@@ -71,7 +104,7 @@ Beim Betätigen des Buttons gelangt der Benutzer zur gewünschten Seite.
 
 Danach wurde eine Navigation implementiert, die abhängig von einer Benutzerentscheidung unterschiedliche Seiten öffnet. Die Logik wurde mithilfe einer ``If-`` und ``Switch``-Funktion umgesetzt.
 
-### Beispiel:
+### Beispiel
 
 ```text
 If(
@@ -90,19 +123,19 @@ If(
 
 An bestimmten Stellen war nur eine JA/NEIN-Auswahl erlaubt. Der Aufbau erfolgte wie folgt:
 
-### OnVisible:
+### OnVisible
 
 ```text
 UpdateContext({ selectedone: Blank() })
 ```
 
-### OnCheck (JA/NEIN-Feld):
+### OnCheck (JA/NEIN-Feld)
 
 ```text
 UpdateContext({ selectedone: 1 })
 ```
 
-### Default-Wert:
+### Default-Wert
 
 ```text
 selectedone = 1
@@ -112,7 +145,7 @@ selectedone = 1
 
 Gegen Ende des Projekts begann Alexis mit der Implementierung der SharePoint-Datenbank-Anbindungen. Je nach Formular unterschied sich die Umsetzung.
 
-### Beispiel:
+### Beispiel
 
 ```text
 Set(Person; User());;
@@ -147,7 +180,7 @@ Während der Entwicklung traten vereinzelt Fehler auf, unter anderem doppelte Ei
 
 ## Verbesserung und Optimierung
 
-Im letzten Teil des Projekts stieß Tobias Kuhn zum Team hinzu. Die restlichen Aufgaben wurden aufgeteilt, wobei Alexis hauptsächlich Bugfixing und Anpassungen am Design übernahm.
+Im letzten Teil des Projekts stiess Tobias Kuhn zum Team hinzu. Die restlichen Aufgaben wurden aufgeteilt, wobei Alexis hauptsächlich Bugfixing und Anpassungen am Design übernahm.
 
 ### Anpassungen an bestehenden Listen
 
@@ -155,7 +188,7 @@ Im letzten Teil des Projekts stieß Tobias Kuhn zum Team hinzu. Die restlichen A
 
 - Das Feld Description sollte den Initiative Name anzeigen.
 
-- Auf Wunsch von Herrn Baumann wurde die Darstellung der Liste vergrößert.
+- Auf Wunsch von Herrn Baumann wurde die Darstellung der Liste vergrössert.
 
 ### Seite S00
 
@@ -184,7 +217,7 @@ Stattdessen wurden:
 
 Auf den Seiten 2.2.1 und 2.2.2 sollten:
 
-- Die Zahlenfelder unten weiß dargestellt werden
+- Die Zahlenfelder unten weiss dargestellt werden
 
 - Die Texte unterschiedlich eingefärbt werden:
 
@@ -198,7 +231,7 @@ Da es in normalen Textfeldern nicht möglich ist, nur einen Teil des Textes einz
 
 Auf der SharePoint-Seite wurden die Tabellen ausgeblendet und stattdessen nur noch unter Site Contents angezeigt, sodass sie nicht direkt und einfach erreichbar sind.
 
-## Arbeit von Tobias Kuhn:
+## Arbeit von Tobias Kuhn
 
 Tobias Kuhn übernahm hauptsächlich die Umsetzung der Ausdrucksseiten. Ziel dieser Seiten war es, die Inhalte so darzustellen, dass sie übersichtlich aufgebaut sind und nur dann ausgefüllt bzw. angezeigt werden, wenn die entsprechenden Fragen im Questionnaire beantwortet wurden. Nicht relevante Inhalte sollten auf den Ausdrucksseiten vollständig ausgeblendet bleiben.
 
