@@ -8,6 +8,7 @@
     - [Ziel](#ziel)
     - [Vorgaben](#vorgaben)
     - [Architektur](#architektur)
+  - [Datenmodell \& SharePoint-Listen](#datenmodell--sharepoint-listen)
   - [Listen](#listen)
     - [Datentyp-Entscheidungen](#datentyp-entscheidungen)
   - [Namenskonvention](#namenskonvention)
@@ -48,9 +49,24 @@ Umsetzung einer Power Apps Canvas App mit einer einfachen und übersichtlichen B
 
 Als Datenbankstruktur wurden SharePoint-Listen verwendet.
 
+## Datenmodell & SharePoint-Listen
+
+|   Liste  |   Zweck  |
+|----------|----------|
+| tbl_General    | Hauptdaten der Initiative   |
+| tbl_All_OCS_entities   | Alle ausgewählten OCS wärte wie viele und welche   |
+| tbl_Benefit_from_cost_reductions  | Nutzen aus Kostenreduktion   |
+| tbl_Benefits   | Gesamtbenefits  |
+| tbl_Cost_Creating   | Kosten (intern / extern)|
+| tbl_Cost_Increase   | Erwartete Kostenzunahmen   |
+| tbl_One_Time_Business    | Welches Business profitiert von der einmahligen Zunahme  |
+| tbl_One_Repetitive_Business    | Welches Business profitiert von der repitiven Zunahme   |
+| tbl_Turnover   | Auswertung von Umsatzdaten |
+
 ## Listen
 
 Alexis entschied sich, als Datenbankstruktur einfache SharePoint-Listen zu verwenden und diese logisch aufzuteilen. Zur besseren Orientierung wurde die Struktur zunächst in Lucidchart modelliert, wie im entsprechenden Diagramm dargestellt.
+
 
 ### Datentyp-Entscheidungen
 
@@ -243,3 +259,4 @@ Die Ausdrucksseiten wurden von Tobias sehr klar und strukturiert gestaltet. Zus�
 - Einen Druck-Button, über den der Druckvorgang ausgelöst werden kann
 
 Der Druckprozess ist mit einem Power-Automate-Flow verbunden, den Tobias ebenfalls umgesetzt hat. Nach dem Auslösen des Drucks werden die erzeugten Seiten automatisch an Olav versendet. Der Versand erfolgt per E-Mail mit einer vorgefertigten E-Mail-Vorlage, wodurch der Prozess vollständig automatisiert ist und keine manuelle Nachbearbeitung benötigt
+
