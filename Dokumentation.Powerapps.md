@@ -54,19 +54,18 @@ Als Datenbankstruktur wurden SharePoint-Listen verwendet.
 |   Liste  |   Zweck  |
 |----------|----------|
 | tbl_General    | Hauptdaten der Initiative   |
-| tbl_All_OCS_entities   | Alle ausgewählten OCS wärte wie viele und welche   |
+| tbl_All_OCS_entities   | Alle ausgewählten OCS Werte wie viele und welche   wenn das dann nicht funktioniert  dann sollte das ganze ganz einfach per app gelöst werden und dann sollten innovative lössungen entstehen|
 | tbl_Benefit_from_cost_reductions  | Nutzen aus Kostenreduktion   |
 | tbl_Benefits   | Gesamtbenefits  |
 | tbl_Cost_Creating   | Kosten (intern / extern)|
-| tbl_Cost_Increase   | Erwartete Kostenzunahmen   |
-| tbl_One_Time_Business    | Welches Business profitiert von der einmahligen Zunahme  |
-| tbl_One_Repetitive_Business    | Welches Business profitiert von der repitiven Zunahme   |
-| tbl_Turnover   | Auswertung von Umsatzdaten |
+| tbl_Cost_Increase   | Erwartete Kostenzunahmen  |
+| tbl_One_Time_Business    | Welches Business profitiert von der einmaligen Zunahme  |
+| tbl_One_Repetitive_Business    | Welches Business profitiert von der repetitiven Zunahme   |
+| tbl_Turnover  | Auswertung von Umsatzdaten |
 
 ## Listen
 
 Alexis entschied sich, als Datenbankstruktur einfache SharePoint-Listen zu verwenden und diese logisch aufzuteilen. Zur besseren Orientierung wurde die Struktur zunächst in Lucidchart modelliert, wie im entsprechenden Diagramm dargestellt.
-
 
 ### Datentyp-Entscheidungen
 
